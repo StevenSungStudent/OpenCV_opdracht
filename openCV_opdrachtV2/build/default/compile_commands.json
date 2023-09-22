@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/home/steven/eclipse-workspace/openCV_opdrachtV2/build/default",
+  "command": "/usr/bin/c++  -I/home/steven/eclipse-workspace/openCV_opdrachtV2/build/default -isystem /usr/include/opencv4 -Wall -Wextra -Wconversion -o CMakeFiles/openCV_opdrachtV2.dir/src/openCV_opdrachtV2.cpp.o -c /home/steven/eclipse-workspace/openCV_opdrachtV2/src/openCV_opdrachtV2.cpp",
+  "file": "/home/steven/eclipse-workspace/openCV_opdrachtV2/src/openCV_opdrachtV2.cpp"
+},
+{
+  "directory": "/home/steven/eclipse-workspace/openCV_opdrachtV2/build/default",
+  "command": "/usr/bin/c++  -I/home/steven/eclipse-workspace/openCV_opdrachtV2/build/default -isystem /usr/include/opencv4 -Wall -Wextra -Wconversion -o CMakeFiles/openCV_opdrachtV2.dir/src/ShapeDetection.cpp.o -c /home/steven/eclipse-workspace/openCV_opdrachtV2/src/ShapeDetection.cpp",
+  "file": "/home/steven/eclipse-workspace/openCV_opdrachtV2/src/ShapeDetection.cpp"
+},
+{
+  "directory": "/home/steven/eclipse-workspace/openCV_opdrachtV2/build/default",
+  "command": "/usr/bin/c++  -I/home/steven/eclipse-workspace/openCV_opdrachtV2/build/default -isystem /usr/include/opencv4 -Wall -Wextra -Wconversion -o CMakeFiles/openCV_opdrachtV2.dir/src/Parser.cpp.o -c /home/steven/eclipse-workspace/openCV_opdrachtV2/src/Parser.cpp",
+  "file": "/home/steven/eclipse-workspace/openCV_opdrachtV2/src/Parser.cpp"
+}
+]

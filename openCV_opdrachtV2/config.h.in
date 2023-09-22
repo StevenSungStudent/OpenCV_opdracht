@@ -1,0 +1,2 @@
+#define openCV_opdrachtV2_VERSION_MAJOR @openCV_opdrachtV2_VERSION_MAJOR@
+#define openCV_opdrachtV2_VERSION_MINOR @openCV_opdrachtV2_VERSION_MINOR@
