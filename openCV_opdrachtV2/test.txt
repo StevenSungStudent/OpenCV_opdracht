@@ -1,9 +1,8 @@
 vierkant groen
 
-#lol coment get torlled
+#comment
 
 driehoek geel
 rechthoek oranje
 halve cirkel roze
-
 exit

@@ -6,47 +6,45 @@
  */
 
 #include "Parser.h"
+#include <mutex>
 
 Parser::Parser() {
-	// TODO Auto-generated constructor stub
-
 }
 
 Parser::~Parser() {
-	// TODO Auto-generated destructor stub
 }
 
-void Parser::parseFile(std::string fileName, std::string &shape, Colour &colour){
+
+bool Parser::parseFile(const std::string& fileName, std::string &shape, Colour &colour){
 	std::string line;
 	std::ifstream myfile (fileName);
 	if (myfile.is_open()){
 		while ( std::getline (myfile,line) ){
-			std::cout << line << std::endl;
 			if(!line.empty()){
 				if(line == "exit"){
-					exit(0);
+					myfile.close();
+					return (true);
 				}
 				if(line.at(0) != '#'){
 					parseInput(line, shape, colour);
-					std::this_thread::sleep_for(std::chrono::seconds(2));
+					std::this_thread::sleep_for(std::chrono::seconds(1));
 				}
 			}
 		}
 		myfile.close();
 	}
 
+	return (false);
 }
 
-void Parser::parseInput(std::string inputText, std::string &shape, Colour &colour){
+void Parser::parseInput(const std::string& inputText, std::string &shape, Colour &colour){
+	std::mutex mtx;
 	std::stringstream ssText(inputText);
-
-	std::pair<std::string, Colour> shapeColour;
 	std::string shapeString;
 	std::string colourString;
 
-	Colour requestedColour;
-	std::string requestedShape;
-
+	Colour requestedColour = UNKNOWN;
+	std::string requestedShape = "UNKNOWN";
 
 	std::string token;
 	std::getline(ssText, token, ' ');
@@ -91,7 +89,10 @@ void Parser::parseInput(std::string inputText, std::string &shape, Colour &colou
 		std::cout << "Unknown shape" << std::endl;
 	}
 
-	shape = requestedShape;
-	colour = requestedColour;
-}
+	if(requestedColour != UNKNOWN && requestedShape != "UNKNOWN"){
+		std::lock_guard<std::mutex> lock(mtx);
+		colour = requestedColour;
+		shape = requestedShape;
+	}
 
+}

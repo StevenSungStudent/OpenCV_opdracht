@@ -259,8 +259,7 @@ CMakeFiles/openCV_opdrachtV2.dir/src/openCV_opdrachtV2.cpp.o: \
  /usr/include/opencv4/opencv2/imgproc.hpp \
  /usr/include/opencv4/opencv2/imgproc/segmentation.hpp \
  /usr/include/opencv4/opencv2/highgui.hpp \
- /usr/include/opencv4/opencv2/videoio.hpp /usr/include/c++/11/math.h \
- /usr/include/c++/11/iostream \
+ /usr/include/opencv4/opencv2/videoio.hpp /usr/include/c++/11/iostream \
  /home/steven/eclipse-workspace/openCV_opdrachtV2/src/Parser.h \
  /usr/include/c++/11/thread /usr/include/c++/11/bits/std_thread.h \
  /usr/include/c++/11/bits/this_thread_sleep.h /usr/include/c++/11/fstream \

@@ -259,5 +259,4 @@ CMakeFiles/openCV_opdrachtV2.dir/src/ShapeDetection.cpp.o: \
  /usr/include/opencv4/opencv2/imgproc.hpp \
  /usr/include/opencv4/opencv2/imgproc/segmentation.hpp \
  /usr/include/opencv4/opencv2/highgui.hpp \
- /usr/include/opencv4/opencv2/videoio.hpp /usr/include/c++/11/math.h \
- /usr/include/c++/11/iostream
+ /usr/include/opencv4/opencv2/videoio.hpp /usr/include/c++/11/iostream

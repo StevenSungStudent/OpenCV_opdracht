@@ -17,7 +17,8 @@ enum Colour {
 	PINK,
 	YELLOW,
 	ORANGE,
-	CALIBRATE
+	CALIBRATE,
+	UNKNOWN
 };
 
 

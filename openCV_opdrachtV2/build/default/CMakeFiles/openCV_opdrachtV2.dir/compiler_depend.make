@@ -639,7 +639,6 @@ CMakeFiles/openCV_opdrachtV2.dir/src/ShapeDetection.cpp.o: ../../src/ShapeDetect
   /usr/include/opencv4/opencv2/imgproc/segmentation.hpp \
   /usr/include/opencv4/opencv2/highgui.hpp \
   /usr/include/opencv4/opencv2/videoio.hpp \
-  /usr/include/c++/11/math.h \
   /usr/include/c++/11/iostream
 
 CMakeFiles/openCV_opdrachtV2.dir/src/openCV_opdrachtV2.cpp.o: ../../src/openCV_opdrachtV2.cpp \
@@ -956,7 +955,6 @@ CMakeFiles/openCV_opdrachtV2.dir/src/openCV_opdrachtV2.cpp.o: ../../src/openCV_o
   /usr/include/opencv4/opencv2/imgproc/segmentation.hpp \
   /usr/include/opencv4/opencv2/highgui.hpp \
   /usr/include/opencv4/opencv2/videoio.hpp \
-  /usr/include/c++/11/math.h \
   /usr/include/c++/11/iostream \
   ../../src/Parser.h \
   /usr/include/c++/11/thread \
@@ -970,8 +968,6 @@ CMakeFiles/openCV_opdrachtV2.dir/src/openCV_opdrachtV2.cpp.o: ../../src/openCV_o
 
 
 ../../src/openCV_opdrachtV2.cpp:
-
-/usr/include/c++/11/math.h:
 
 /usr/include/c++/11/bits/fstream.tcc:
 

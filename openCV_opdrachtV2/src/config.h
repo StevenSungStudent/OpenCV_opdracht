@@ -1,0 +1,2 @@
+#define openCV_opdrachtV2_VERSION_MAJOR 0
+#define openCV_opdrachtV2_VERSION_MINOR 1
