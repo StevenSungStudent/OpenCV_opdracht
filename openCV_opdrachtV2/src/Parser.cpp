@@ -68,6 +68,7 @@ void Parser::parseInput(const std::string& inputText, std::string &shape, Colour
 		requestedColour = ORANGE;
 
 	}else{
+		requestedColour = UNKNOWN;
 		std::cout << "Unknown colour"  << std::endl;
 	}
 
@@ -86,13 +87,14 @@ void Parser::parseInput(const std::string& inputText, std::string &shape, Colour
 		 requestedShape = "Triangle";
 
 	}else{
-		std::cout << "Unknown shape" << std::endl;
+		 requestedShape = "INVALID";
+		std::cout << "Unknown shape: " << std::endl;
 	}
 
-	if(requestedColour != UNKNOWN && requestedShape != "UNKNOWN"){
-		std::lock_guard<std::mutex> lock(mtx);
-		colour = requestedColour;
-		shape = requestedShape;
-	}
+//	if(requestedColour != UNKNOWN && requestedShape != "UNKNOWN"){
+	std::lock_guard<std::mutex> lock(mtx);
+	colour = requestedColour;
+	shape = requestedShape;
+//	}
 
 }

@@ -73,6 +73,8 @@ void ShapeDetection::getContours(cv::Mat inputImg, cv::Mat outputImg, Colour req
 				std::cout << "X: " << std::to_string(center.x) << " | Y: " << std::to_string(center.y), center;
 				cv::putText(outputImg, "X: " + std::to_string(center.x) + " | Y: " + std::to_string(center.y), center, cv::FONT_HERSHEY_PLAIN, 1, cv::Scalar(0,255,0),2);
 				cv::putText(outputImg, objectType, {boundRect.at(i).x, boundRect.at(i).y - 5 }, cv::FONT_HERSHEY_PLAIN, 1, cv::Scalar(0,255,0),2);
+			}else{
+				std::cout << requestedShape << " not found" << std::endl;
 			}
             long long dectectDuration = cv::getTickCount() - startTime;
 			std::cout << "Duration: " << dectectDuration << std::endl;
@@ -119,7 +121,7 @@ std::string ShapeDetection::determineShape(std::vector<cv::Point> objectPoly, fl
 			halfCircleRadius = boundRect.width / 2;
 		}
 
-		if(std::abs(calculateCircleArea(halfCircleRadius) / 2 - objectArea) < SEMI_CIRCLE_MARGIN){
+		if(std::abs(calculateCircleArea(halfCircleRadius) / 2 - objectArea) < SEMI_CIRCLE_MARGIN && objectCorners > 4){
 			objectType = "Semi-circle";
 		}else if(std::abs(calculateCircleArea(boundRect.width / 2) - objectArea) < CIRCLE_MARGIN){
 			objectType = "Circle";
@@ -154,24 +156,24 @@ cv::Mat ShapeDetection::prepocessing(cv::Mat inputImg, Colour objectColour){
 
 	switch(objectColour){
 	case GREEN:
-		lowerLimit = {57, 87, 24};
-		upperLimit = {112, 244, 255};
+		lowerLimit = {55, 31, 144};
+		upperLimit = {89, 131, 255};
 
 		break;
 
 	case PINK:
-		lowerLimit = {101, 67, 31};
+		lowerLimit = {131, 40, 0};
 		upperLimit = {179, 255, 255};
 		break;
 
 	case YELLOW:
-		lowerLimit = {16, 59, 45};
-		upperLimit = {40, 255, 255};
+		lowerLimit = {24, 33, 0};
+		upperLimit = {55, 255, 255};
 		break;
 
 	case ORANGE:
-		lowerLimit = {18, 39, 0};
-		upperLimit = {54, 181, 255};
+		lowerLimit = {0, 152, 0};
+		upperLimit = {38, 255, 255};
 		break;
 
 	case CALIBRATE:
@@ -180,6 +182,8 @@ cv::Mat ShapeDetection::prepocessing(cv::Mat inputImg, Colour objectColour){
 		break;
 
 	case UNKNOWN:
+		lowerLimit = {0, 0, 0};
+		upperLimit = {179, 255, 255};
 		break;
 
 	}

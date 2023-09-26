@@ -1,8 +1,9 @@
-vierkant groen
+halve cirkel groen
 
 #comment
 
-driehoek geel
+cirkel #geel
+dftgyhjik;
 rechthoek oranje
-halve cirkel roze
+driehoek roze
 exit
