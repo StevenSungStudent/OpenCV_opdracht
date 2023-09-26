@@ -70,7 +70,7 @@ void ShapeDetection::getContours(cv::Mat inputImg, cv::Mat outputImg, Colour req
 
 			    cv::circle(outputImg, center, 2, cv::Scalar(0,0,255), 2);
 				cv::drawContours(outputImg, contoursPoly, static_cast<int>(i), cv::Scalar(255,0,255),2);
-				std::cout << "X: " << std::to_string(center.x) << " | Y: " << std::to_string(center.y), center;
+				std::cout << "X: " << std::to_string(center.x) << " | Y: " << std::to_string(center.y) << std::endl;
 				cv::putText(outputImg, "X: " + std::to_string(center.x) + " | Y: " + std::to_string(center.y), center, cv::FONT_HERSHEY_PLAIN, 1, cv::Scalar(0,255,0),2);
 				cv::putText(outputImg, objectType, {boundRect.at(i).x, boundRect.at(i).y - 5 }, cv::FONT_HERSHEY_PLAIN, 1, cv::Scalar(0,255,0),2);
 			}else{
@@ -144,7 +144,6 @@ std::string ShapeDetection::determineShape(std::vector<cv::Point> objectPoly, fl
 		}
 	}
 
-
 	return (objectType);
 }
 
@@ -185,7 +184,6 @@ cv::Mat ShapeDetection::prepocessing(cv::Mat inputImg, Colour objectColour){
 		lowerLimit = {0, 0, 0};
 		upperLimit = {179, 255, 255};
 		break;
-
 	}
 
 	cv::cvtColor(inputImg, workingImg, cv::COLOR_BGR2HSV);
