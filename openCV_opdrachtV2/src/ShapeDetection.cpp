@@ -96,7 +96,7 @@ void ShapeDetection::showSliders(){
 std::string ShapeDetection::determineShape(std::vector<cv::Point> objectPoly, float objectArea, cv::Rect boundRect){
 	const double SQUARE_MARGIN = 30;
 	const double CIRCLE_MARGIN = objectArea * 0.25;
-	const double SEMI_CIRCLE_MARGIN = objectArea * 0.25;
+	const double SEMI_CIRCLE_MARGIN = objectArea * 0.30;
 	const double TRIANGLE_MARGIN = objectArea * 0.35;
 	long unsigned int objectCorners = objectPoly.size();
 
@@ -155,13 +155,13 @@ cv::Mat ShapeDetection::prepocessing(cv::Mat inputImg, Colour objectColour){
 
 	switch(objectColour){
 	case GREEN:
-		lowerLimit = {55, 31, 144};
-		upperLimit = {89, 131, 255};
+		lowerLimit = {44, 19, 104};
+		upperLimit = {90, 255, 255};
 
 		break;
 
 	case PINK:
-		lowerLimit = {131, 40, 0};
+		lowerLimit = {138, 28, 146};
 		upperLimit = {179, 255, 255};
 		break;
 
@@ -171,8 +171,8 @@ cv::Mat ShapeDetection::prepocessing(cv::Mat inputImg, Colour objectColour){
 		break;
 
 	case ORANGE:
-		lowerLimit = {0, 152, 0};
-		upperLimit = {38, 255, 255};
+		lowerLimit = {0, 151, 168};
+		upperLimit = {29, 255, 255};
 		break;
 
 	case CALIBRATE:

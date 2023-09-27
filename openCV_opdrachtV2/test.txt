@@ -4,6 +4,6 @@ halve cirkel groen
 
 cirkel #geel
 dftgyhjik;
-rechthoek oranje
-driehoek roze
+cirkel oranje
+driehoek geel
 exit

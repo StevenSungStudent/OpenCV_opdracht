@@ -40,7 +40,7 @@ public:
 	void showSliders();
 
 private:
-	const unsigned short MIN_AREA_SIZE = 2000;
+	const unsigned short MIN_AREA_SIZE = 1500;
 
 	cv::Scalar lowerLimit;
 	cv::Scalar upperLimit;

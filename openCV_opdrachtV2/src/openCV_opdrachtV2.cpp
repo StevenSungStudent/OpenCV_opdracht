@@ -82,7 +82,7 @@ int main(int argc, char **argv) {
 
 	}
 
-	cv::VideoCapture cap(0, cv::CAP_V4L2);
+	cv::VideoCapture cap(2, cv::CAP_V4L2);
 
 	if (!cap.isOpened()) {
 		std::cout << "Error: Cannot open camera." << std::endl;
